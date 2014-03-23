@@ -1,5 +1,6 @@
 package com.intenthq.battleship;
 
+import com.intenthq.battleship.game.InputProcessor;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.MockitoAnnotations;
@@ -26,8 +27,11 @@ public class BattleshipControllerTest
 
 	@Before
 	public void setUp() throws Exception {
+
+
 		MockitoAnnotations.initMocks(this);
 		battleshipController = new BattleshipController();
+        battleshipController.setInputProcessor(new InputProcessor());
 	}
 
 	@Test
